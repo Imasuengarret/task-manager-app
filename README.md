@@ -1,1 +1,1 @@
-A task manager app build with nodejs, express and mongoDB
+A task manager app built with nodejs, express and mongoDB

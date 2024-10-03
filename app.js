@@ -3,6 +3,7 @@ const app = express();
 const mongoose = require('mongoose');
 const Task = require('./Route/Task')
 
+app.use(express.json())
 
 // import dotenv
 require('dotenv').config();
@@ -12,7 +13,6 @@ const db = require('./DB/connect').Mongo_URL
 mongoose.connect(db, {dbName: 'task-manager-app'})
 .then(() => console.log('connected to MongoDB'))
 .catch((err) => console.error(err));
-
 
 
 app.use(express.static('./public'))
